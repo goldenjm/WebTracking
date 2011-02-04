@@ -8,5 +8,6 @@ if(PEAR::isError($db)){
 }
 $db->setFetchMode(DB_FETCHMODE_ASSOC);
 
+echo ("hello... <br>");
 $output = $db->getAll("SELECT * FROM test");
 print_r($output);
