@@ -32,7 +32,7 @@ url_loader = function(text_url){
 
 /*timing attack*/
 
-document.onready = function(){
+
 	var loader = url_loader("http://www.joeygolden.com/WT/top500.txt");
 	var blind_run = new array();
 	var cache_run = new array();
@@ -57,4 +57,4 @@ document.onready = function(){
 	for (var index in blind_run){
 		document.writeln(blind_run[index]-cache_run[index]);
 	}
-}
+
