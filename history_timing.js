@@ -42,7 +42,7 @@ url_loader = function(text_url){
 		var run_request = new ajaxRequest();
 		var start_time = timer.getTime();
 		run_request.open("GET", "http://www." + loader.url_list[index], false);
-		run_request.send(null);
+		//run_request.send(null);
 		var end_time = timer.getTime();
 		var difference = end_time - start_time;
 		blind_run.push(difference);
@@ -51,7 +51,7 @@ url_loader = function(text_url){
 		var run_request = new ajaxRequest();
 		var start_time = timer.getTime();
 		run_request.open("GET", "http://www." + loader.url_list[index], false);
-		run_request.send(null);
+		//run_request.send(null);
 		var end_time = timer.getTime();
 		var difference = end_time - start_time;
 		cache_run.push(difference);
