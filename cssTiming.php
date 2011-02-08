@@ -16,7 +16,6 @@ $s2 = 'rgb(88,88,88)'; //style 2
 var sitesText = "<?echo(file_get_contents('top500.txt'));?>";
 var sites = sitesText.split('\n');
 
-
 function e(x) {return document.getElementById(x);}
 IE = true;
 if (document.defaultView)
