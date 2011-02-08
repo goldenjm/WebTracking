@@ -29,7 +29,6 @@ var b = document.createElement('a');
 b.href = 'http://fdasadfsadfsa.com';
 b.innerHTML = "Click Here2!";
 
-
 if (IE)
 {
 	var aStyle = a.currentStyle.color;
@@ -38,6 +37,15 @@ if (IE)
 {
 	var aStyle = document.defaultView.getComputedStyle(a,null).getPropertyValue('color');
 	var bStyle = document.defaultView.getComputedStyle(b,null).getPropertyValue('color');
+	for (i=0; i<sites.length; i++)
+	{
+		a.href = "http://www." + sites[i];
+		if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == <?echo($s2)?> )
+		{
+			results.innerHTML += a.href;
+		}
+	
+	}
 }
 
 e('results1').innerHTML = aStyle;
