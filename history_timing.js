@@ -37,21 +37,22 @@ url_loader = function(text_url){
 	var loader = new url_loader("http://www.joeygolden.com/WT/top500.txt");
 	var blind_run = new Array();
 	var cache_run = new Array();
+	var timer = new Date;
 	for (var index in loader.url_list){
 		var run_request = new ajaxRequest();
-		var start_time = new Date(milliseconds);
+		var start_time = timer.getTime();
 		run_request.open("GET", loader.url_list[index], false);
 		run_request.send(null);
-		var end_time = new Date(millisecondds);
+		var end_time = timer.getTime();
 		var difference = end_time - start_time;
 		blind_run.push(difference);
 	}
 	for (var index in loader.url_list){
 		var run_request = new ajaxRequest();
-		var start_time = new Date(milliseconds);
+		var start_time = timer.getTime();
 		run_request.open("GET", loader.url_list[index], false);
 		run_request.send(null);
-		var end_time = new Date(millisecondds);
+		var end_time = timer.getTime();
 		var difference = end_time - start_time;
 		cache_run.push(difference);
 	}
