@@ -9,16 +9,36 @@ $s2 = 'rgb(88,88,88)'; //style 2
 
 <a href="http://google.com" id="link1">Google</a>
 <a href="http://fakesite.com" id="link2">fakesite.com</a>
-<div id="results">hi</div>
+<div id="results1">hi1</div><br><div id="results2">hi2</div>
 </body>
 </html>
 <script type="text/javascript">
 function e(x) {return document.getElementById(x);}
+if (document.defaultView)
+{
+	IE = false;
+}
+
 var a = document.createElement('a');
 a.href = 'http://google.com';
 a.innerHTML = "Click Here!";
-var aStyle = document.defaultView.getComputedStyle(a,null).getPropertyValue('color');
-e('results').innerHTML = aStyle;
-b = e('link1');
-c = e('link2');
+var b = document.createElement('a');
+b.href = 'http://fdasadfsadfsa.com';
+b.innerHTML = "Click Here2!";
+
+
+if (IE)
+{
+	var aStyle = a.currentStyle.color;
+	var bStyle = b.currentStyle.color
+} else 
+{
+	var aStyle = document.defaultView.getComputedStyle(a,null).getPropertyValue('color');
+	var bStyle = document.defaultView.getComputedStyle(b,null).getPropertyValue('color');
+}
+
+e('results1').innerHTML = aStyle;
+e('results2').innerHTML = bStyle;
+link1 = e('link1');
+link2 = e('link2');
 </script>
