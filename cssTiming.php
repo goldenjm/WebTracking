@@ -3,7 +3,7 @@ $s1 = 'rgb(1,2,3)'; //style 1
 $s2 = 'rgb(88,88,88)'; //style 2
 ?>
 <html>
-<head><style>h1 {background-color: #888888;} a {color: <? echo($s1) ?>; font-size: 30px;} a:visited{color: <? echo($s2) ?>; font-size: 30px;} </style></head>
+<head><style>h1 {background-color: #888888;} a {color: <? echo($s1) ?>; font-size: 30px;} a:visited{color: <? echo($s2) ?>; font-size: 16px;} </style></head>
 <body>
 <h1>Test</h1>
 
