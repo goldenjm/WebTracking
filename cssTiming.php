@@ -1,6 +1,12 @@
 <? 
 $s1 = 'rgb(1, 2,3)'; //style 1 The spacing is critically important here.
 $s2 = 'rgb(88, 88, 88)'; //style 2
+$l = 1;
+if (isset($_GET['l']))
+{
+	$l = _GET['l'];
+}
+
 ?>
 <html>
 <head><style>h1 {background-color: #888888;} a {color: <? echo($s1) ?>; font-size: 30px;} a:visited{color: <? echo($s2) ?>; font-size: 16px;} </style></head>
@@ -29,22 +35,26 @@ var b = document.createElement('a');
 b.href = 'http://fdasadfsadfsa.com';
 b.innerHTML = "Click Here2!";
 
+//TODO: Finish this
 if (IE)
-{
+{ //TODO: make this work in IE
 	var aStyle = a.currentStyle.color;
 	var bStyle = b.currentStyle.color
 } else 
 {
 	var aStyle = document.defaultView.getComputedStyle(a,null).getPropertyValue('color');
 	var bStyle = document.defaultView.getComputedStyle(b,null).getPropertyValue('color');
-	for (i=0; i<sites.length; i++)
+	for (l = 0; l< <? echo($l); ?>; l++)
 	{
-		a.href = "http://www." + sites[i];
-		if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s2)?>' )
+		for (i=0; i<sites.length; i++)
 		{
-			results1.innerHTML += a.href;
+			a.href = "http://www." + sites[i];
+			if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s2)?>' )
+			{
+				results1.innerHTML += a.href;
+			}
+		
 		}
-	
 	}
 }
 
