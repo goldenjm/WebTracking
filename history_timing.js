@@ -23,7 +23,8 @@ url_loader = function(text_url){
 	var raw_list = new ajaxRequest();
 	raw_list.open("GET", text_url, false);
 	raw_list.send(null);
-	var split_list = raw_list.split(',');
+	var resp_list = raw_list.responseText;
+	var split_list = resp_list.split(',');
 	for (var index in split_list){
 		url_list.push(split_list[index]);
 	}
