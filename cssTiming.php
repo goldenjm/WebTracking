@@ -1,6 +1,6 @@
 <? 
-$s1 = 'rgb(1,2,3)'; //style 1
-$s2 = 'rgb(88,88,88)'; //style 2
+$s1 = 'rgb(1, 2,3)'; //style 1 The spacing is critically important here.
+$s2 = 'rgb(88, 88, 88)'; //style 2
 ?>
 <html>
 <head><style>h1 {background-color: #888888;} a {color: <? echo($s1) ?>; font-size: 30px;} a:visited{color: <? echo($s2) ?>; font-size: 16px;} </style></head>
