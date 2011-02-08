@@ -40,6 +40,6 @@ if (IE)
 
 e('results1').innerHTML = aStyle;
 e('results2').innerHTML = bStyle;
-link1 = e('link1');
-link2 = e('link2');
+var link1 = e('link1');
+var link2 = e('link2');
 </script>
