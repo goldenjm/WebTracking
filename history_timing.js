@@ -26,7 +26,7 @@ url_loader = function(text_url){
 	var resp_list = raw_list.responseText;
 	var split_list = resp_list.split(',');
 	for (var index in split_list){
-		url_list.push(split_list[index]);
+		this.url_list.push(split_list[index]);
 	}
 }
 
