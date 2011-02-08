@@ -19,7 +19,7 @@ function ajaxRequest(){
 /*parser*/
 
 url_loader = function(text_url){
-	var url_list = new Array();
+	this.url_list = new Array();
 	var raw_list = new ajaxRequest();
 	raw_list.open("GET", text_url, false);
 	raw_list.send(null);
