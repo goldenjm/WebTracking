@@ -1,6 +1,7 @@
 <html>
-<head></head>
+<head><style>h1 {background-color: #888888;}</style></head>
 <body>
+<h1>Test</h1>
 <script type="text/javascript">
 document.styleSheets[0].insertRule('a {color: green}',0);
 document.styleSheets[0].insertRule('a:visited {color: red}',0);
