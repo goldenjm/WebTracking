@@ -42,14 +42,14 @@ if (IE)
 		a.href = "http://www." + sites[i];
 		if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s2)?>' )
 		{
-			results.innerHTML += a.href;
+			results1.innerHTML += a.href;
 		}
 	
 	}
 }
 
-e('results1').innerHTML = aStyle;
-e('results2').innerHTML = bStyle;
+//e('results1').innerHTML = aStyle;
+//e('results2').innerHTML = bStyle;
 var link1 = e('link1');
 var link2 = e('link2');
 </script>
