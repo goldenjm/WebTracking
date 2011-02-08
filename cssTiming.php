@@ -4,7 +4,7 @@ $s2 = 'rgb(88, 88, 88)'; //style 2
 $l = 1;
 if (isset($_GET['l']))
 {
-	$l = _GET['l'];
+	$l = $_GET['l'];
 }
 
 ?>
