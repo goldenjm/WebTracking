@@ -13,13 +13,15 @@ $s2 = 'rgb(88,88,88)'; //style 2
 </body>
 </html>
 <script type="text/javascript">
+var sitesText = "<?echo(file_get_contents('top500.txt'));?>";
+var sites = sitesText.split(',');
+
 function e(x) {return document.getElementById(x);}
 IE = true;
 if (document.defaultView)
 {
 	IE = false;
 }
-
 var a = document.createElement('a');
 a.href = 'http://google.com';
 a.innerHTML = "Click Here!";
