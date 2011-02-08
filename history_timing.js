@@ -35,8 +35,8 @@ url_loader = function(text_url){
 
 
 	var loader = url_loader("http://www.joeygolden.com/WT/top500.txt");
-	var blind_run = new array();
-	var cache_run = new array();
+	var blind_run = new Array();
+	var cache_run = new Array();
 	for (var index in loader.url_list){
 		var run_request = new ajaxRequest();
 		var start_time = new Date(milliseconds);
