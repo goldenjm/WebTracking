@@ -14,6 +14,7 @@ $s2 = 'rgb(88,88,88)'; //style 2
 </html>
 <script type="text/javascript">
 function e(x) {return document.getElementById(x);}
+IE = true;
 if (document.defaultView)
 {
 	IE = false;
