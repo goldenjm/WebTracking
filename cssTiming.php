@@ -40,7 +40,7 @@ if (IE)
 	for (i=0; i<sites.length; i++)
 	{
 		a.href = "http://www." + sites[i];
-		if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == <?echo($s2)?> )
+		if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s2)?>' )
 		{
 			results.innerHTML += a.href;
 		}
