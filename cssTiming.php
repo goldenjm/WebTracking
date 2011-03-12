@@ -45,28 +45,29 @@ if (IE)
 {
 	var aStyle = document.defaultView.getComputedStyle(a,null).getPropertyValue('color');
 	var bStyle = document.defaultView.getComputedStyle(b,null).getPropertyValue('color');
-	for (l = 0; l< <? echo($l); ?>; l++)
+}
+for (l = 0; l< <? echo($l); ?>; l++)
+{
+	for (i=0; i<sites.length; i++)
 	{
-		for (i=0; i<sites.length; i++)
+		a.href = "http://www." + sites[i];
+		if (IE)
 		{
-			a.href = "http://www." + sites[i];
-			if (IE)
+			if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s3)?>' )
 			{
-				if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s3)?>' )
-				{
-					results1.innerHTML += a.href;
-				}
+				results1.innerHTML += a.href;
 			}
-			else
-			{
-				if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s2)?>' )
-				{
-					results1.innerHTML += a.href;
-				}
-			}
-		
 		}
+		else
+		{
+			if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s2)?>' )
+			{
+				results1.innerHTML += a.href;
+			}
+		}
+	
 	}
+}
 }
 
 //e('results1').innerHTML = aStyle;
