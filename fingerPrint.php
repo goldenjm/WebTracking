@@ -1,10 +1,8 @@
 <? 
 print_r($_SERVER['HTTP_USER_AGENT']);
 print_r($_SERVER['HTTP_ACCEPT']);
-
-
-
 ?>
+<html><head></head><body>
 <script type="text/javascript">
 var params = "lorem=ipsum&name=binny";
 http.open("POST", "sbd.php, true);
@@ -18,3 +16,4 @@ http.onreadystatechange = function() {//Call a function when the state changes.
 }
 http.send(params);
 </script>
+</body></html>
