@@ -6,8 +6,9 @@ print_r($_SERVER['HTTP_ACCEPT']);
 <script type="text/javascript">
 var width = screen.width
 var height = screen.height
+var timezone = new Date().getTimezoneOffset()
 alert("hello1");
-var params = "width="+width+"&height="+height;
+var params = "width="+width+"&height="+height+"&timezone="+timezone;
 var http = new XMLHttpRequest();
 http.open("POST", "sbd.php", true);
 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
