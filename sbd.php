@@ -1,1 +1,1 @@
-<? echo("hello"); ?>
+<? echo($_POST['width'].'x'.$_POST['height']); ?>
