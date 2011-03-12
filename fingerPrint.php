@@ -7,7 +7,7 @@ print_r($_SERVER['HTTP_ACCEPT']);
 var width = screen.width
 var height = screen.height
 alert("hello1");
-var params = "width="+width+"&height="+height";
+var params = "width="+width+"&height="+height;
 var http = new XMLHttpRequest();
 http.open("POST", "sbd.php", true);
 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
