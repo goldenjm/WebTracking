@@ -43,7 +43,7 @@ url_loader = function(text_url){
 	var image_list = new Array();
 	var images_loaded_blind = 0;
 	
-	image_load_end_blind() = function(index){
+	image_load_end_blind = function(index){
 		var timer = new Date();
 		blind_run_end[index] = timer.getTime();
 	}
@@ -55,7 +55,7 @@ url_loader = function(text_url){
 		blind_run_start[index] = timer.getTime();
 		
 		var image_blind_run = new Image();
-		image_list[index].push(image_blind_run);
+		image_list.push(image_blind_run);
 		image_blind_run.onload = image_load_end_blind(index);
 		
 		image_blind_run.src = loader.url_list[index];
