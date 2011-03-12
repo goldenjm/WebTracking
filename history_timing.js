@@ -57,7 +57,7 @@ url_loader = function(text_url){
 		
 		var image_blind_run = new Image();
 		image_list.push(image_blind_run);
-		image_blind_run.onload = image_load_end_blind(index);
+		image_blind_run.onLoad = image_load_end_blind(index);
 		
 		image_blind_run.src = loader.url_list[index];
 
