@@ -4,8 +4,9 @@ print_r($_SERVER['HTTP_USER_AGENT']);
 print_r($_SERVER['HTTP_ACCEPT']);
 ?>
 <script type="text/javascript">
+alert("hello");
 var params = "lorem=ipsum&name=binny";
-http.open("POST", "sbd.php, true);
+http.open("POST", "sbd.php", true);
 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 http.setRequestHeader("Content-length", params.length);
 http.setRequestHeader("Connection", "close");
