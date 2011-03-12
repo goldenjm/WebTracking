@@ -24,7 +24,7 @@ url_loader = function(text_url){
 	raw_list.open("GET", text_url, false);
 	raw_list.send(null);
 	var resp_list = raw_list.responseText;
-	var split_list = resp_list.split(',');
+	var split_list = resp_list.split('\n');
 	for (var index in split_list){
 		this.url_list.push(split_list[index]);
 	}
@@ -34,7 +34,7 @@ url_loader = function(text_url){
 /*timing attack*/
 
 
-	var loader = new url_loader("http://www.joeygolden.com/WT/imagelist.txt");
+	var loader = new url_loader("http://www.joeygolden.com/WebTracking/imagelist.txt");
 	var blind_run = new Array();
 	var cache_run = new Array();
 	
