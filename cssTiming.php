@@ -53,7 +53,7 @@ for (l = 0; l< <? echo($l); ?>; l++)
 		a.href = "http://www." + sites[i];
 		if (IE)
 		{
-			if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s3)?>' )
+			if (a.currentStyle.color == '<?echo($s3)?>' )
 			{
 				results1.innerHTML += a.href;
 			}
