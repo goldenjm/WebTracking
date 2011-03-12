@@ -6,6 +6,7 @@ print_r($_SERVER['HTTP_ACCEPT']);
 <script type="text/javascript">
 alert("hello");
 var params = "lorem=ipsum&name=binny";
+var http = new XMLHttpRequest();
 http.open("POST", "sbd.php", true);
 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 http.setRequestHeader("Content-length", params.length);
