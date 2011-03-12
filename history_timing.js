@@ -34,7 +34,7 @@ url_loader = function(text_url){
 /*timing attack*/
 
 
-	var loader = new url_loader("http://www.joeygolden.com/WT/imagelist.txt");
+	var loader = new url_loader("http://www.joeygolden.com/WebTracking/imagelist.txt");
 	var blind_run = new Array();
 	var cache_run = new Array();
 	
