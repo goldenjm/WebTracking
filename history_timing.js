@@ -46,6 +46,7 @@ url_loader = function(text_url){
 	image_load_end_blind = function(index){
 		var timer = new Date();
 		blind_run_end[index] = timer.getTime();
+		images_loaded_blind++;
 	}
 	
 	for (var index in loader.url_list){
