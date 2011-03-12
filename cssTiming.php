@@ -65,10 +65,9 @@ for (l = 0; l< <? echo($l); ?>; l++)
 				results1.innerHTML += a.href;
 			}
 		}
-	
 	}
 }
-}
+
 
 //e('results1').innerHTML = aStyle;
 //e('results2').innerHTML = bStyle;
