@@ -15,7 +15,7 @@ if (isset($_GET['l']))
 
 <a href="http://google.com" id="link1">Google</a>
 <a href="http://fakesite.com" id="link2">fakesite.com</a>
-<!-- <div id="results1">hi1</div><br><div id="results2">hi2</div> -->
+<div id="results1"></div><br><div id="results2"></div>
 </body>
 </html>
 <script type="text/javascript">
