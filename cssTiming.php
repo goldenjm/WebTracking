@@ -1,6 +1,7 @@
 <? 
 $s1 = 'rgb(1, 2,3)'; //style 1 The spacing is critically important here.
 $s2 = 'rgb(88, 88, 88)'; //style 2
+$s3 = 'rgb(88,88,88)'; //style 2 for ie
 $l = 1;
 if (isset($_GET['l']))
 {
@@ -49,9 +50,19 @@ if (IE)
 		for (i=0; i<sites.length; i++)
 		{
 			a.href = "http://www." + sites[i];
-			if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s2)?>' )
+			if (IE)
 			{
-				results1.innerHTML += a.href;
+				if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s3)?>' )
+				{
+					results1.innerHTML += a.href;
+				}
+			}
+			else
+			{
+				if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s2)?>' )
+				{
+					results1.innerHTML += a.href;
+				}
 			}
 		
 		}
