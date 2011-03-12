@@ -1,8 +1,8 @@
+<html><head></head><body>
 <? 
 print_r($_SERVER['HTTP_USER_AGENT']);
 print_r($_SERVER['HTTP_ACCEPT']);
 ?>
-<html><head></head><body>
 <script type="text/javascript">
 var params = "lorem=ipsum&name=binny";
 http.open("POST", "sbd.php, true);
