@@ -43,7 +43,7 @@ url_loader = function(text_url){
 	var image_list = new Array();
 	var images_loaded_blind = 0;
 	
-	image_load_end_blind() = function(index){
+	image_load_end_blind = function(index){
 		var timer = new Date();
 		blind_run_end[index] = timer.getTime();
 	}
