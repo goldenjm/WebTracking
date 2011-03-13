@@ -101,6 +101,9 @@ output_test = function(){
 		document.writeln(blind_run_end[index] - blind_run_start[index]);
 		document.writeln(cache_run_end[index] - cache_run_start[index]);
 		document.writeln((blind_run_end[index] - blind_run_start[index])-(cache_run_end[index] - cache_run_start[index]));
+		document.writeln("<img src = '");
+		document.writeln(loader.url_list[index]);
+		document.writeln("'></img>>");
 		document.writeln("<br/>");
 	}
 }
