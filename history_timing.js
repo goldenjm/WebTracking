@@ -43,25 +43,27 @@ url_loader = function(text_url){
 	var image_list = new Array();
 	var images_loaded_blind = 0;
 	
-
-	
-	for (var index in loader.url_list){
+	blind_run_onload = function(){
+		var timer_end = new Date();
+		blind_run_end[images_loaded_blind] = timer_end.getTime();
+		images_loaded_blind++;
 		
-		//var run_request = new ajaxRequest();
+		var timer_start = new Date();
+		blind_run_start[images_loaded_blind] = timer_start.getTime();
+		var image_blind_run = new Image();
+		image_blind_run.onload = blind_run_onload;
+		image_blind_run.src = loader.url_list[images_loaded_blind];
+	}
+	
 		var timer = new Date();
-		blind_run_start[index] = timer.getTime();
+		blind_run_start[images_loaded_blind] = timer.getTime();
 		
 		var image_blind_run = new Image();
 		image_list.push(image_blind_run);
-		image_blind_run.onload = function(index){
-			var timer_end = new Date();
-			blind_run_end[index] = timer_end.getTime();
-			images_loaded_blind++;
-		}
+		image_blind_run.onload = blind_run_onload;
 		
-		image_blind_run.src = loader.url_list[index];
+		image_blind_run.src = loader.url_list[images_loaded_blind];
 
-	}
 	
 setTimeout("output_test()", 20000);
 
