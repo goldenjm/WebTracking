@@ -10,7 +10,6 @@ print_r($_SERVER['HTTP_ACCEPT']);
 
 <script type="text/javascript">
 function e(x) {return document.getElementById(x);}
-var a = e(a);
 var width = screen.width
 var height = screen.height
 var timezone = new Date().getTimezoneOffset()
@@ -22,7 +21,8 @@ http.setRequestHeader("Content-length", params.length);
 http.setRequestHeader("Connection", "close");
 http.onreadystatechange = function() {//Call a function when the state changes.
 	if(http.readyState == 4 && http.status == 200) {
-		a.innerHTML = http.responseText;
+		e(a).innerHTML = http.responseText;
+		alert(http.responseText);
 	}
 }
 http.send(params);
