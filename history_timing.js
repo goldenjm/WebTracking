@@ -42,6 +42,7 @@ url_loader = function(text_url){
 	var cache_run_end = new Array();
 	var image_list = new Array();
 	var images_loaded_blind = 0;
+	var images_loaded_cache = 0;
 	
 	blind_run_onload = function(){
 		var timer_end = new Date();
@@ -53,6 +54,30 @@ url_loader = function(text_url){
 			var image_blind_run = new Image();
 			image_blind_run.onload = blind_run_onload;
 			image_blind_run.src = loader.url_list[images_loaded_blind];
+		}else{
+			cache_run_begin();
+		}
+	}
+	cache_run_begin = function(){
+		var timer = new Date();
+		cache_run_start[images_loaded_cache] = timer.getTime();
+		
+		var image_cache_run = new Image();
+		image_list.push(image_cache_run);
+		image_cache_run.onload = cache_run_onload;
+		
+		image_cache_run.src = loader.url_list[images_loaded_cache];
+	}
+	cache_run_onload = function(){
+		var timer_end = new Date();
+		images_loaded_cache[images_loaded_cache] = timer_end.getTime();
+		images_loaded_cache++;
+		if (images_loaded_cache < loader.url_list.length){
+			var timer_start = new Date();
+			cache_run_start[images_loaded_cache] = timer_start.getTime();
+			var image_cache_run = new Image();
+			image_cache_run.onload = cache_run_onload;
+			image_cache_run.src = loader.url_list[images_loaded_cache];
 		}else{
 			setTimeout("output_test()", 10000);
 		}
@@ -74,6 +99,9 @@ output_test = function(){
 	
 	for (var index in loader.url_list){
 		document.writeln(blind_run_end[index] - blind_run_start[index]);
+		document.writeln(cache_run_end[index] - cache_run_start[index]);
+		document.writeln((blind_run_end[index] - blind_run_start[index])-(cache_run_end[index] - cache_run_start[index]));
+		document.writeln("<br/>");
 	}
 }
 
