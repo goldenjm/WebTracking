@@ -63,15 +63,16 @@ url_loader = function(text_url){
 
 	}
 	
+setTimeout("output_test()",10000);
 
-
-	while (images_loaded_blind < loader.url_list.length){
-	}
+output_test = function(){
 	
 	for (var index in  loader.url_list){
 		document.writeln(blind_run_end[index] - blind_run_start[index]);
 	}
-	
+}
+
+
 	/*
 	
 	for (var index in loader.url_list){
