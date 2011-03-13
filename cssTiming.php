@@ -32,6 +32,7 @@ if (document.defaultView)
 var a = document.createElement('a');
 a.href = 'http://google.com';
 a.innerHTML = "Click Here!";
+document.body.appendChild(a);
 var b = document.createElement('a');
 b.href = 'http://fdasadfsadfsa.com';
 b.innerHTML = "Click Here2!";
