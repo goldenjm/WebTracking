@@ -63,7 +63,7 @@ url_loader = function(text_url){
 
 	}
 	
-setTimeout("output_test()",10000);
+setTimeout("output_test()", 40000);
 
 output_test = function(){
 	
