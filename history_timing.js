@@ -72,7 +72,7 @@ url_loader = function(text_url){
 
 output_test = function(){
 	
-	for (var index in  loader.url_list){
+	for (var index in loader.url_list){
 		document.writeln(blind_run_end[index] - blind_run_start[index]);
 	}
 }
