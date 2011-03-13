@@ -47,12 +47,13 @@ url_loader = function(text_url){
 		var timer_end = new Date();
 		blind_run_end[images_loaded_blind] = timer_end.getTime();
 		images_loaded_blind++;
-		
-		var timer_start = new Date();
-		blind_run_start[images_loaded_blind] = timer_start.getTime();
-		var image_blind_run = new Image();
-		image_blind_run.onload = blind_run_onload;
-		image_blind_run.src = loader.url_list[images_loaded_blind];
+		if (images_loaded_blind < loader.url_list.length){
+			var timer_start = new Date();
+			blind_run_start[images_loaded_blind] = timer_start.getTime();
+			var image_blind_run = new Image();
+			image_blind_run.onload = blind_run_onload;
+			image_blind_run.src = loader.url_list[images_loaded_blind];
+		}
 	}
 	
 		var timer = new Date();
