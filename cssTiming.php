@@ -14,7 +14,7 @@ if (isset($_GET['l']))
 <body>
 <h1>CSS History Attack - You've visited the following sites (from a list of the top 500)</h1>
 <h2>Firefox 3.6.15 and IE 8.0.7600.16385 are vulnerable, Chrome is not as of March 12, 2011</h2>
-See <a href="http://whattheinternetknowsaboutyou.com">What the Internet Knows About You</a> for a more extensive version of this privacy attack.
+See <a href="http://whattheinternetknowsaboutyou.com">What the Internet Knows About You</a> for a more extensive version of this privacy attack.<br><br>
 
 <div id="results1"></div><br><div id="results2"></div></br>
 <!--For debugging: if you've visited Google and your browser is vulnerable, the first link should look different than the second one (except IE, which is also vulnerable).

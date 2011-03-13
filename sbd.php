@@ -1,1 +1,1 @@
-<? echo($_POST['width'].'x'.$_POST['height']); ?>
+<? echo('Resolution= '.$_POST['width'].'x'.$_POST['height'].' Timezone= '.$_POST['timezone']); ?>
