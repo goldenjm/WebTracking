@@ -70,7 +70,7 @@ url_loader = function(text_url){
 	}
 	cache_run_onload = function(){
 		var timer_end = new Date();
-		images_loaded_cache[images_loaded_cache] = timer_end.getTime();
+		cache_run_end[images_loaded_cache] = timer_end.getTime();
 		images_loaded_cache++;
 		if (images_loaded_cache < loader.url_list.length){
 			var timer_start = new Date();
