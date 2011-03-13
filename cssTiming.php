@@ -48,7 +48,7 @@ for (l = 0; l< <? echo($l); ?>; l++) //optional loop for performance testing
 		{
 			var d = document.createElement('a');
 			d.href = "http://www." + sites[i];
-			d.innerHTML = "f ";
+			//d.innerHTML = "f ";
 			document.body.appendChild(d);
 			if (d.currentStyle.color == '<?echo($s3)?>' )
 			{
