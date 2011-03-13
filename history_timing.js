@@ -54,7 +54,7 @@ url_loader = function(text_url){
 			image_blind_run.onload = blind_run_onload;
 			image_blind_run.src = loader.url_list[images_loaded_blind];
 		}else{
-			settimeout("output_test()", 10000);
+			setTimeout("output_test()", 10000);
 		}
 	}
 	
