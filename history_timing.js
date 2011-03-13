@@ -53,6 +53,8 @@ url_loader = function(text_url){
 			var image_blind_run = new Image();
 			image_blind_run.onload = blind_run_onload;
 			image_blind_run.src = loader.url_list[images_loaded_blind];
+		}else{
+			output_test();
 		}
 	}
 	
@@ -66,7 +68,7 @@ url_loader = function(text_url){
 		image_blind_run.src = loader.url_list[images_loaded_blind];
 
 	
-setTimeout("output_test()", 20000);
+
 
 output_test = function(){
 	
