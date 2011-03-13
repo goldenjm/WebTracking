@@ -48,11 +48,11 @@ for (l = 0; l< <? echo($l); ?>; l++) //optional loop for performance testing
 		{
 			var d = document.createElement('a');
 			d.href = "http://www." + sites[i];
-			d.innerHTML = "fdffdsafsadfsdfwefewafwe";
+			d.innerHTML = "f ";
 			document.body.appendChild(d);
 			if (d.currentStyle.color == '<?echo($s3)?>' )
 			{
-				results1.innerHTML += a.href;
+				results1.innerHTML += d.href;
 			}
 		}
 		else
