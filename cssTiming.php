@@ -38,29 +38,28 @@ b.href = 'http://fdasadfsadfsa.com';
 b.innerHTML = "Click Here2!";
 
 //TODO: Finish this
-if (IE)
-{ //TODO: make this work in IE
-	var aStyle = a.currentStyle.color;
-	var bStyle = b.currentStyle.color
-} else 
-{
-	var aStyle = document.defaultView.getComputedStyle(a,null).getPropertyValue('color');
-	var bStyle = document.defaultView.getComputedStyle(b,null).getPropertyValue('color');
-}
-for (l = 0; l< <? echo($l); ?>; l++)
+//TODO: make this work in IE
+for (l = 0; l< <? echo($l); ?>; l++) //optional loop for performance testing
 {
 	for (i=0; i<sites.length; i++)
 	{
-		a.href = "http://www." + sites[i];
+		
+		d.currentStyle.color
+		
 		if (IE)
 		{
-			if (a.currentStyle.color == '<?echo($s3)?>' )
+			var d = document.createElement('a');
+			d.href = "http://www." + sites[i];
+			d.innerHTML = "fdffdsafsadfsdfwefewafwe";
+			document.body.appendChild(d);
+			if (d.currentStyle.color == '<?echo($s3)?>' )
 			{
 				results1.innerHTML += a.href;
 			}
 		}
 		else
 		{
+			a.href = "http://www." + sites[i];
 			if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s2)?>' )
 			{
 				results1.innerHTML += a.href;
