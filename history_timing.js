@@ -53,9 +53,9 @@ url_loader = function(text_url){
 		
 		var image_blind_run = new Image();
 		image_list.push(image_blind_run);
-		image_blind_run.onload = function(){
+		image_blind_run.onload = function(index){
 			var timer_end = new Date();
-			blind_run_end[images_loaded_blind] = timer_end.getTime();
+			blind_run_end[index] = timer_end.getTime();
 			images_loaded_blind++;
 		}
 		
@@ -63,7 +63,7 @@ url_loader = function(text_url){
 
 	}
 	
-setTimeout("output_test()", 40000);
+setTimeout("output_test()", 20000);
 
 output_test = function(){
 	
