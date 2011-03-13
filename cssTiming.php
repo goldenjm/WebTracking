@@ -44,8 +44,6 @@ for (l = 0; l< <? echo($l); ?>; l++) //optional loop for performance testing
 	for (i=0; i<sites.length; i++)
 	{
 		
-		d.currentStyle.color
-		
 		if (IE)
 		{
 			var d = document.createElement('a');
