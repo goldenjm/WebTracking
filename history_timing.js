@@ -53,9 +53,9 @@ url_loader = function(text_url){
 		
 		var image_blind_run = new Image();
 		image_list.push(image_blind_run);
-		image_blind_run.onload = function(index){
+		image_blind_run.onload = function(){
 			var timer_end = new Date();
-			blind_run_end[index] = timer_end.getTime();
+			blind_run_end[images_loaded_blind] = timer_end.getTime();
 			images_loaded_blind++;
 		}
 		
