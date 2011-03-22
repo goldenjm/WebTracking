@@ -99,9 +99,9 @@ output_test = function(){
 	
 	for (var index in loader.url_list){
 		if(((blind_run_end[index] - blind_run_start[index])-(cache_run_end[index] - cache_run_start[index]))< 20);
-		document.writeln("You have been to site:");
+		document.writeln("<b>You have been to site:      </b>");
 		document.writeln(loader.url_list[index]);
-		document.writeln("      With Image:");
+		document.writeln("<b>      With Image:</b>");
 		document.writeln("<img src = '");
 		document.writeln(loader.url_list[index]);
 		document.writeln("'></img>>");
