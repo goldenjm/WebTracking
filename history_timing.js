@@ -98,14 +98,22 @@ url_loader = function(text_url){
 output_test = function(){
 	
 	for (var index in loader.url_list){
-		if(((blind_run_end[index] - blind_run_start[index])-(cache_run_end[index] - cache_run_start[index]))< 20){
+		if(((blind_run_end[index] - blind_run_start[index])-(cache_run_end[index] - cache_run_start[index]))< 25){
 			document.writeln("<b>You have been to site:      </b>");
 			document.writeln(loader.url_list[index]);
-			document.writeln("<b>      With Image:</b>");
+			document.writeln("<b>      determined using image:</b>");
 			document.writeln("<img src = '");
 			document.writeln(loader.url_list[index]);
 			document.writeln("'></img>>");
 			document.writeln("<br/>");
+		}else{
+			document.writeln("<b>You have <u> NOT </u> been to site:      </b>");
+			document.writeln(loader.url_list[index]);
+			document.writeln("<b>      determined using image:</b>");
+			document.writeln("<img src = '");
+			document.writeln(loader.url_list[index]);
+			document.writeln("'></img>>");
+			document.writeln("<br/>");			
 		}
 	}
 }
