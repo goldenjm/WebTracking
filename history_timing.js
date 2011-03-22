@@ -98,9 +98,10 @@ url_loader = function(text_url){
 output_test = function(){
 	
 	for (var index in loader.url_list){
-		document.writeln(blind_run_end[index] - blind_run_start[index]);
-		document.writeln(cache_run_end[index] - cache_run_start[index]);
-		document.writeln((blind_run_end[index] - blind_run_start[index])-(cache_run_end[index] - cache_run_start[index]));
+		if(((blind_run_end[index] - blind_run_start[index])-(cache_run_end[index] - cache_run_start[index]))< 20);
+		document.writeln("You have been to site:");
+		document.writeln(loader.url_list[index]);
+		document.writeln("      With Image:");
 		document.writeln("<img src = '");
 		document.writeln(loader.url_list[index]);
 		document.writeln("'></img>>");
