@@ -79,7 +79,7 @@ url_loader = function(text_url){
 			image_cache_run.onload = cache_run_onload;
 			image_cache_run.src = loader.url_list[images_loaded_cache];
 		}else{
-			setTimeout("output_test()", 10000);
+			setTimeout("output_test()", 1000);
 		}
 	}
 	
