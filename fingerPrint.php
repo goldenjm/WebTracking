@@ -14,6 +14,10 @@ var width = screen.width
 var height = screen.height
 var timezone = new Date().getTimezoneOffset()
 var params = "width="+width+"&height="+height+"&timezone="+timezone;
+var plugins = navigator.plugins;
+var plugin_length = navigator.plugins.length;
+
+
 var http = new XMLHttpRequest();
 http.open("POST", "sbd.php", true);
 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -23,6 +27,31 @@ http.onreadystatechange = function() {//Call a function when the state changes.
 	if(http.readyState == 4 && http.status == 200) {
 		e('a').innerHTML = http.responseText;
 		//alert(http.responseText);
+		document.write("<div>");
+		document.write("<table border='1'>");
+		for(var i = 0; i < plugin_length; i++){
+			document.write("<tr>");
+			
+			document.write("<td>");
+			document.write(plugins[i].name);
+			document.write("</td>");
+			
+			document.write("<td>");
+			document.write(plugins[i].filename);
+			document.write("</td>");
+			
+			document.write("<td>");
+			document.write(plugins[i].description);
+			document.write("</td>");
+			
+			document.write("<td>");
+			document.write(plugins[i].version);
+			document.write("</td>");
+			
+			document.write("</tr>");
+		}
+		document.write("</table");
+		document.write("</div>");
 	}
 }
 http.send(params);
