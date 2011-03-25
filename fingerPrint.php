@@ -27,31 +27,31 @@ http.onreadystatechange = function() {//Call a function when the state changes.
 	if(http.readyState == 4 && http.status == 200) {
 		e('a').innerHTML = http.responseText;
 		//alert(http.responseText);
-		document.write("<div>");
-		document.write("<table border='1'>");
+		document.writeln("<div>");
+		document.writeln("<table border='1'>");
 		for(var i = 0; i < plugin_length; i++){
-			document.write("<tr>");
+			document.writeln("<tr>");
 			
-			document.write("<td>");
-			document.write(plugins[i].name);
-			document.write("</td>");
+			document.writeln("<td>");
+			document.writeln(plugins[i].name);
+			document.writeln("</td>");
 			
-			document.write("<td>");
-			document.write(plugins[i].filename);
-			document.write("</td>");
+			document.writeln("<td>");
+			document.writeln(plugins[i].filename);
+			document.writeln("</td>");
 			
-			document.write("<td>");
-			document.write(plugins[i].description);
-			document.write("</td>");
+			document.writeln("<td>");
+			document.writeln(plugins[i].description);
+			document.writeln("</td>");
 			
-			document.write("<td>");
-			document.write(plugins[i].version);
-			document.write("</td>");
+			document.writeln("<td>");
+			document.writeln(plugins[i].version);
+			document.writeln("</td>");
 			
-			document.write("</tr>");
+			document.writeln("</tr>");
 		}
-		document.write("</table");
-		document.write("</div>");
+		document.writeln("</table");
+		document.writeln("</div>");
 	}
 }
 http.send(params);
