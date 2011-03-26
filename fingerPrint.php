@@ -69,7 +69,7 @@ http.send(params);
 </script>
 
 
-<div id = text;>
+<div id = "text">
 <script type="text/javascript">
 var fonts = new Array();
 
