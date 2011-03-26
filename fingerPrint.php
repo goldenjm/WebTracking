@@ -69,7 +69,7 @@ http.send(params);
 </script>
 
 
-<div>
+<div id = text;>
 <script type="text/javascript">
 var fonts = new Array();
 
@@ -79,19 +79,19 @@ function load_java_line(hax){
 }
 
 function java_ouptut(){
-	document.writeln("<div>");
-	document.writeln("<table border='1'>");
+	document.getElementById("text").innerHTML += "<div>";
+	document.getElementById("text").innerHTML += "<table border='1'>";
 	for(var i = 0; i < fonts.length; i++){
-		document.writeln("<tr>");
+		document.getElementById("text").innerHTML += "<tr>";
 			
-		document.writeln("<td>");
-		document.writeln(fonts[i]);
-		document.writeln("</td>");
+		document.getElementById("text").innerHTML += "<td>";
+		document.getElementById("text").innerHTML += fonts[i];
+		document.getElementById("text").innerHTML += "</td>";
 			
-		document.writeln("</tr>");
+		document.getElementById("text").innerHTML += "</tr>";
 	}
-	document.writeln("</table");
-	document.writeln("</div>");
+	document.getElementById("text").innerHTML += "</div>";
+	document.getElementById("text").innerHTML += "</table>";
 	}
 </script>
 </div>
