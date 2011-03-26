@@ -62,6 +62,13 @@ http.send(params);
 		document.writeln("</table");
 		document.writeln("</div>");
 
+
+
+
+
+</script>
+<div>
+<script type="text/javascript">
 var fonts = new Array();
 
 
@@ -75,19 +82,15 @@ function java_ouptut(){
 		document.writeln("<tr>");
 			
 		document.writeln("<td>");
-		document.writeln(plugins[i].name);
+		document.writeln(fonts[i]);
 		document.writeln("</td>");
 			
 		document.writeln("</tr>");
 	}
 	document.writeln("</table");
 	document.writeln("</div>");
+</script>
+</div>
 
 }
-
-
-
-</script>
-
-
 </body></html>
