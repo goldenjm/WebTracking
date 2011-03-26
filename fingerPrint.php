@@ -92,7 +92,7 @@ function java_ouptut(){
 	}
 	document.writeln("</table");
 	document.writeln("</div>");
-	
+	}
 </script>
 </div>
 
