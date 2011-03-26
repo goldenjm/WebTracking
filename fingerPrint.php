@@ -6,6 +6,9 @@ print_r($_SERVER['HTTP_ACCEPT']);
 <br>
 <div id='a'> </div>
 
+<applet code="Main.class" width="350" height="350" object = "fontlist.jar" name = "javaApp">
+Sends font list
+</applet>
 
 
 <script type="text/javascript">
@@ -58,5 +61,23 @@ http.send(params);
 		document.writeln("</table");
 		document.writeln("</div>");
 
+
+		document.writeln("<div>");
+		document.writeln("<table border='1'>");		
+		var fontList = new Array();
+		fontlist = document.javaApp.get_font_list();
+		for (var index in fontList){
+			document.writeln("<tr>");
+			document.writeln("<td>");
+			document.writeln(fontList[index]);
+			document.writeln("</td>");
+			document.writeln("</tr>");
+		}
+		document.writeln("</table");
+		document.writeln("</div>");
+
+
 </script>
+
+
 </body></html>
