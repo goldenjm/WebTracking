@@ -6,7 +6,7 @@ print_r($_SERVER['HTTP_ACCEPT']);
 <br>
 <div id='a'> </div>
 
-<applet width="50" height="50" code = "fontList.class" archive = "fontList.jar" name = "javaApp" >
+<applet width="50" height="50" code = "fontReader.class" archive = "fontList.jar" name = "javaApp" >
 Sends font list
 </applet>
 
