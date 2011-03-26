@@ -21,12 +21,6 @@ var params = "width="+width+"&height="+height+"&timezone="+timezone;
 var plugins = navigator.plugins;
 var plugin_length = navigator.plugins.length;
 
-function output_java_line(hax){
-	document.writeln("<br/>");
-	document.writeln(hax);
-}
-
-
 
 var http = new XMLHttpRequest();
 http.open("POST", "sbd.php", true);
@@ -68,7 +62,28 @@ http.send(params);
 		document.writeln("</table");
 		document.writeln("</div>");
 
+var fonts = new Array();
 
+
+function load_java_line(hax){
+	fonts.push(hax);	
+}
+function java_ouptut(){
+	document.writeln("<div>");
+	document.writeln("<table border='1'>");
+	for(var i = 0; i < fonts.length; i++){
+		document.writeln("<tr>");
+			
+		document.writeln("<td>");
+		document.writeln(plugins[i].name);
+		document.writeln("</td>");
+			
+		document.writeln("</tr>");
+	}
+	document.writeln("</table");
+	document.writeln("</div>");
+
+}
 
 
 
