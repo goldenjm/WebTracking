@@ -77,6 +77,7 @@ var fonts = new Array();
 function load_java_line(hax){
 	fonts.push(hax);	
 }
+
 function java_ouptut(){
 	document.writeln("<div>");
 	document.writeln("<table border='1'>");
@@ -91,8 +92,8 @@ function java_ouptut(){
 	}
 	document.writeln("</table");
 	document.writeln("</div>");
+	
 </script>
 </div>
 
-}
 </body></html>
