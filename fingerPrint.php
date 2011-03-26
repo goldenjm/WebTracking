@@ -65,7 +65,7 @@ http.send(params);
 		document.writeln("<div>");
 		document.writeln("<table border='1'>");		
 		var fontCount = document.javaApp.get_font_list_size();
-		for (var index = 0; index < fontCount; index++;){
+		for (var index = 0; index < fontCount; index++){
 			document.writeln("<tr>");
 			document.writeln("<td>");
 			document.writeln(document.javaApp.get_from_font_list(index));
