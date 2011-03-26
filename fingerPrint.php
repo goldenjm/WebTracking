@@ -10,6 +10,7 @@ print_r($_SERVER['HTTP_ACCEPT']);
 Sends font list
 </applet>
 
+
 <SCRIPT>
 function doAlert(s) {
    alert(s);
