@@ -80,10 +80,7 @@ function load_java_line(hax){
 
 function java_ouptut(){
 	for(var i = 0; i < fonts.length; i++){
-
 		document.getElementById("text").innerHTML += fonts[i];
-		document.getElementById("text").innerHTML += "\n";
-
 	}
 
 	}
