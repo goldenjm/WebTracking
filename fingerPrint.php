@@ -20,6 +20,10 @@ var params = "width="+width+"&height="+height+"&timezone="+timezone;
 var plugins = navigator.plugins;
 var plugin_length = navigator.plugins.length;
 
+var output_java_line = function(hax){
+	document.writeln("<br/>");
+	document.writeln(hax);
+}
 
 var http = new XMLHttpRequest();
 http.open("POST", "sbd.php", true);
@@ -62,19 +66,7 @@ http.send(params);
 		document.writeln("</div>");
 
 
-		document.writeln("<div>");
-		document.writeln("<table border='1'>");		
-		
-		var fontCount = setTimeout("document.javaApp.get_font_list_size()", 5000);
-		for (var index = 0; index < fontCount; index++){
-			document.writeln("<tr>");
-			document.writeln("<td>");
-			document.writeln(document.javaApp.get_from_font_list(index));
-			document.writeln("</td>");
-			document.writeln("</tr>");
-		}
-		document.writeln("</table");
-		document.writeln("</div>");
+
 
 
 </script>
