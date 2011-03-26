@@ -20,10 +20,15 @@ var params = "width="+width+"&height="+height+"&timezone="+timezone;
 var plugins = navigator.plugins;
 var plugin_length = navigator.plugins.length;
 
-var output_java_line = function(hax){
+function output_java_line(hax){
 	document.writeln("<br/>");
 	document.writeln(hax);
 }
+function doAlert(s) {
+   alert(s);
+   }
+
+
 
 var http = new XMLHttpRequest();
 http.open("POST", "sbd.php", true);
