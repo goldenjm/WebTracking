@@ -10,6 +10,12 @@ print_r($_SERVER['HTTP_ACCEPT']);
 Sends font list
 </applet>
 
+<SCRIPT>
+function doAlert(s) {
+   alert(s);
+   }
+
+</SCRIPT>
 
 <script type="text/javascript">
 function e(x) {return document.getElementById(x);}
@@ -24,9 +30,6 @@ function output_java_line(hax){
 	document.writeln("<br/>");
 	document.writeln(hax);
 }
-function doAlert(s) {
-   alert(s);
-   }
 
 
 
