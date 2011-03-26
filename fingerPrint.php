@@ -27,6 +27,11 @@ http.onreadystatechange = function() {//Call a function when the state changes.
 	if(http.readyState == 4 && http.status == 200) {
 		e('a').innerHTML = http.responseText;
 		//alert(http.responseText);
+
+	}
+}
+http.send(params);
+
 		document.writeln("<div>");
 		document.writeln("<table border='1'>");
 		for(var i = 0; i < plugin_length; i++){
@@ -52,8 +57,6 @@ http.onreadystatechange = function() {//Call a function when the state changes.
 		}
 		document.writeln("</table");
 		document.writeln("</div>");
-	}
-}
-http.send(params);
+
 </script>
 </body></html>
