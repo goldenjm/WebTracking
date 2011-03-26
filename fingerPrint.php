@@ -79,19 +79,13 @@ function load_java_line(hax){
 }
 
 function java_ouptut(){
-	document.getElementById("text").innerHTML += "<div>";
-	document.getElementById("text").innerHTML += "<table border='1'>";
 	for(var i = 0; i < fonts.length; i++){
-		document.getElementById("text").innerHTML += "<tr>";
-			
-		document.getElementById("text").innerHTML += "<td>";
+
 		document.getElementById("text").innerHTML += fonts[i];
-		document.getElementById("text").innerHTML += "</td>";
-			
-		document.getElementById("text").innerHTML += "</tr>";
+		document.getElementById("text").innerHTML += "\n";
+
 	}
-	document.getElementById("text").innerHTML += "</div>";
-	document.getElementById("text").innerHTML += "</table>";
+
 	}
 </script>
 </div>
