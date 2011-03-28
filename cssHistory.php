@@ -13,7 +13,6 @@ if (isset($_GET['l']))
 <head><style>h1 {background-color: #888888;} a {color: <? echo($s1) ?>; font-size: 30px;} a:visited{color: <? echo($s2) ?>; font-size: 16px;} </style></head>
 <body>
 <h1>CSS History Attack - You've visited the following sites (from a list of the top 500)</h1>
-<h2>Firefox 3.6.15 and IE 8.0.7600.16385 are vulnerable, Chrome is not as of March 12, 2011</h2>
 See <a href="http://whattheinternetknowsaboutyou.com">What the Internet Knows About You</a> for a more extensive version of this privacy attack.<br><br>
 
 <div id="results1"></div><br><div id="results2"></div></br>
