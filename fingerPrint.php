@@ -1,6 +1,6 @@
 <html><head></head><body>
-<h1>Browser Fingerprint - Data freely offered by your browser that could identify you)</h1>
-See <a href=https://panopticlick.eff.org/">Panopticlick</a> for a more extensive version of this attack.<br><br>
+<h1>Browser Fingerprint - Data freely offered by your browser that could identify you</h1>
+See <a href="https://panopticlick.eff.org/">Panopticlick</a> for a more extensive version of this attack.<br><br>
 
 
 <? 
